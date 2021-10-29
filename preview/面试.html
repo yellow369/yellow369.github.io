@@ -1,0 +1,194 @@
+<html>
+  <head>
+	  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>i5ting_ztree_toc:面试</title>
+		<link href="toc/style/github-bf51422f4bb36427d391e4b75a1daa083c2d840e.css" media="all" rel="stylesheet" type="text/css"/>
+		<link href="toc/style/github2-d731afd4f624c99a4b19ad69f3083cd6d02b81d5.css" media="all" rel="stylesheet" type="text/css"/>
+		<link href="toc/css/zTreeStyle/zTreeStyle.css" media="all" rel="stylesheet" type="text/css"/>
+	  <style>
+		pre {
+		    counter-reset: line-numbering;
+		    border: solid 1px #d9d9d9;
+		    border-radius: 0;
+		    background: #fff;
+		    padding: 0;
+		    line-height: 23px;
+		    margin-bottom: 30px;
+		    white-space: pre;
+		    overflow-x: auto;
+		    word-break: inherit;
+		    word-wrap: inherit;
+		}
+
+		pre a::before {
+		  content: counter(line-numbering);
+		  counter-increment: line-numbering;
+		  padding-right: 1em; /* space after numbers */
+		  width: 25px;
+		  text-align: right;
+		  opacity: 0.7;
+		  display: inline-block;
+		  color: #aaa;
+		  background: #eee;
+		  margin-right: 16px;
+		  padding: 2px 10px;
+		  font-size: 13px;
+		  -webkit-touch-callout: none;
+		  -webkit-user-select: none;
+		  -khtml-user-select: none;
+		  -moz-user-select: none;
+		  -ms-user-select: none;
+		  user-select: none;
+		}
+
+		pre a:first-of-type::before {
+		  padding-top: 10px;
+		}
+
+		pre a:last-of-type::before {
+		  padding-bottom: 10px;
+		}
+
+		pre a:only-of-type::before {
+		  padding: 10px;
+		}
+
+		.highlight { background-color: #ffffcc } /* RIGHT */
+		</style>
+  </head>
+  <body>
+	  <div>
+				<div style='width:25%;'>
+						<ul id="tree" class="ztree" style='width:100%'>
+
+						</ul>
+				</div>
+        <div id='readme' style='width:70%;margin-left:20%;'>
+          	<article class='markdown-body'>
+            	<h1 id="-">面试</h1>
+<h2 id="-">盒子模型</h2>
+<p>所有HTML元素可以看作盒子，在CSS中，&quot;box model&quot;这一术语是用来设计和布局时使用。<br>CSS盒模型本质上是一个盒子，封装周围的HTML元素，它包括：边距，边框，填充，和实际内容</p>
+<h2 id="-">浏览器访问页面流程</h2>
+<p>DNS解析URL对应的IP。<br>根据IP建立TCP连接（三次握手）。<br>HTTP发起请求。<br>服务器处理请求，浏览器接收HTTP响应。<br>渲染页面，构建DOM树。<br>关闭TCP连接（四次挥手）。</p>
+<h2 id="vue-">vue的生命周期</h2>
+<p>从开始创建、初始化数据、编译模板、挂在DOM、渲染-更新-渲染、卸载等一系列过程</p>
+<h2 id="ajax">AJAX</h2>
+<p>最大的优点是在不重新加载整个页面的情况下，可以与服务器交换数据并更新部分网页内容。</p>
+<h3 id="post-get-">POST和GET的区别</h3>
+<ol>
+<li><strong>GET在浏览器回退时是无害的，而POST会再次提交请求。</strong></li>
+<li>GET产生的URL地址可以被Bookmark，而POST不可以。</li>
+<li>GET请求会被浏览器主动cache，而POST不会，除非手动设置。</li>
+<li>GET请求只能进行url编码，而POST支持多种编码方式。</li>
+<li><strong>GET请求参数会被完整保留在浏览器历史记录里，而POST中的参数不会被保留。</strong></li>
+<li>GET请求在URL中传送的参数是有长度限制的，而POST没有。</li>
+<li>对参数的数据类型，GET只接受ASCII字符，而POST没有限制。</li>
+<li><strong>GET比POST更不安全，因为参数直接暴露在URL上，所以不能用来传递敏感信息。</strong></li>
+<li><strong>GET参数通过URL传递，POST放在Request body中。</strong></li>
+</ol>
+<h2 id="h5-">H5新增</h2>
+<h3 id="h5-">H5常用的新元素</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>&lt;article&gt;</code></td>
+<td style="text-align:left">定义页面独立内容</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;aside&gt;</code></td>
+<td style="text-align:left">定义页面的侧边栏内容</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;header&gt;</code></td>
+<td style="text-align:left">定义文档的头部区域</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;command&gt;</code></td>
+<td style="text-align:left">定义命令按钮，比如单选框、复选框或者按钮</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;dialog&gt;</code></td>
+<td style="text-align:left">定义对话框</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;figure&gt;</code></td>
+<td style="text-align:left">规定独立的流内容（如表格、图片、代码）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;footer&gt;</code></td>
+<td style="text-align:left">页脚</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;nav&gt;</code></td>
+<td style="text-align:left">定义导航链接的部分</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;section&gt;</code></td>
+<td style="text-align:left">文档中的区段</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-">新增特性</h3>
+<ol>
+<li><code>&lt;canvas&gt;</code>：元素用于图形绘制，需要通过设置脚本完成</li>
+<li>HTML5 拖放：
+<code>&lt;imgdraggable=&quot;true&quot;&gt;</code> ：设置元素为可拖放
+拖动什么 - ondragstart 和 setData()<br>放到何处 - ondragover<br>进行放置 - ondrop  </li>
+<li>Audio（音频）、Video（视频）</li>
+<li>新增表单输入类型和属性</li>
+<li>H5 语义元素：<img src="../images/H5页面结构.png"></li>
+</ol>
+<h2 id="css3-">CSS3新特性</h2>
+<h2 id="npm-yarn-cnpm">npm yarn cnpm</h2>
+<p><strong>npm：</strong> 包管理工具  </p>
+<p><strong>yarn：</strong></p>
+<ol>
+<li>确定性安装，可以避免很多潜在的问题，相对安全；</li>
+<li>运行速度得到了显著的提升；</li>
+<li>无需互联网连接就能安装本地缓存的依赖项，离线模式<br><strong>cnpm：</strong> 淘宝团队开发的一个完整的npmjs.org镜像</li>
+</ol>
+<h2 id="hash-history-">hash和history的区别</h2>
+<p>前端路由实现的功能：1.记录当前页面的状态；2.可以使用浏览器的前进后退功能</p>
+<p><strong>hash</strong></p>
+<ol>
+<li>hash也称作锚点，本身是用来做页面定位的</li>
+<li>hash的而传参是基于url的，有体积限制</li>
+</ol>
+<p><strong>history</strong>
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<ol>
+<li>可以把数据存放在对象中</li>
+<li>url必须和实际后端发起请求的url一致</li>
+</ol>
+<h2 id="vue-router">vue router</h2>
+
+          	</article>
+        </div>
+		</div>
+<div class="index">
+	<a href="../index.html">首页</a>
+</div>
+  </body>
+</html>
+<script type="text/javascript" src="toc/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="toc/js/jquery.ztree.all-3.5.min.js"></script>
+<script type="text/javascript" src="toc/js/ztree_toc.js"></script>
+<script type="text/javascript" src="toc_conf.js"></script>
+
+<SCRIPT type="text/javascript" >
+
+$(document).ready(function(){
+    var css_conf = eval(markdown_panel_style);
+    $('#readme').css(css_conf)
+    
+    var conf = eval(jquery_ztree_toc_opts);
+		$('#tree').ztree_toc(conf);
+});
+//-->
+</SCRIPT>
