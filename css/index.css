@@ -31,9 +31,14 @@ a {
   text-decoration: none
 }
 
+body {
+  background-color: #f4f4f4;
+}
+
+
 ul {
   height: 70px;
-  background-color: pink;
+  /* background-color: pink; */
 }
 
 ul li {
@@ -59,6 +64,7 @@ aside {
   position: fixed;
   left: 20px;
   top: 50%;
+  opacity: 0.6;
 }
 
 aside ul li{
@@ -68,4 +74,73 @@ aside ul li{
   width: 100px;
   height: 50px;
 }
+
+main .aside {
+  float: right;
+  margin-top: 50px;
+  width: 200px;
+  z-index: 10;
+}
+
+
+main .datas {
+  width: 200px;
+  text-align: center;
+}
+
+main .times {
+  padding-top: 10px;
+  width: 200px;
+  text-align: center;
+}
+
+main .main {
+  margin: 0px auto;
+  width: 800px;
+}
+
+main .main .text {
+  padding-top: 20px;
+}
+
+main .main .pic {
+  padding-top: 20px;
+  display: none;
+}
+
+main .main .control {
+  position: relative;
+  height: 200px;
+  background-color: #fff;
+}
+
+main .main .control #text{
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+main .main .control #images{
+  position: absolute;
+  bottom: 20px;
+  left: 80px;
+}
+
+main .main .control .introduce{
+  position: absolute;
+  bottom: 100px;
+  left: 42%;
+  font-size: 28px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
