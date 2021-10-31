@@ -33,6 +33,7 @@ a {
 
 body {
   background-color: #f4f4f4;
+  
 }
 
 
@@ -112,28 +113,36 @@ main .main .control {
   position: relative;
   height: 200px;
   background-color: #fff;
+  background: url(../background/bg2.png) no-repeat;
 }
 
 main .main .control #text{
   position: absolute;
   bottom: 20px;
   left: 20px;
+  opacity: 0.7;
 }
 
 main .main .control #images{
   position: absolute;
   bottom: 20px;
   left: 80px;
+  opacity: 0.7;
+
 }
 
 main .main .control .introduce{
   position: absolute;
-  bottom: 100px;
-  left: 42%;
+  bottom: 80px;
+  left: 40%;
   font-size: 28px;
 }
 
-
+footer {
+  height: 150px;
+  text-align: center;
+  line-height: 150px;
+}
 
 
 
