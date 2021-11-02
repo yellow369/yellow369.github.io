@@ -35,13 +35,31 @@ btn2.addEventListener('click', function () {
 });
 
 //侧边栏
-let aside = document.querySelector("aside")
-aside.addEventListener('mouseover', function () {
-  aside.style.opacity = "1"
-  aside.style.color = "black"
-})
+let ul = document.querySelector(".aside")
+let lis = document.querySelectorAll(".aside>li")
+for (let i = 0; i < lis.length; i++) {
+  lis[i].addEventListener('mouseover', function () {
+    lis[i].style.opacity = "1"
+    lis[i].style.color = "#000"
+  })
 
-aside.addEventListener('mouseout', function () {
-  aside.style.opacity = "0.6"
-  aside.style.color = "#666"
-})
+  lis[i].addEventListener('mouseout', function () {
+    lis[i].style.opacity = "0.7"
+    lis[i].style.color = "#666"
+  })
+  setInterval(function () {
+    if (Math.ceil(lis[i].offsetWidth) == Math.floor(ul.offsetWidth * 0.9)) {
+      lis[i].style.opacity = "1"
+      lis[i].lastChild.lastChild.style.fontSize = "25px"
+      lis[i].lastChild.lastChild.style.fontWeight = "600"
+    } else {
+      lis[i].style.opacity = "0.7"
+      lis[i].lastChild.lastChild.style.fontSize = "15px"
+      lis[i].lastChild.lastChild.style.fontWeight = "400"
+
+    }
+
+  }, 20)
+}
+
+
