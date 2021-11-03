@@ -23,7 +23,7 @@ img {
 
 button {
   /* 当我们鼠标经过button 按钮的时候，鼠标变成小手 */
-  cursor: pointer
+  cursor: pointer;
 }
 
 a {
@@ -38,16 +38,21 @@ body {
   
 }
 
+header {
+  background-color: #fff;
+}
 
 header ul {
   height: 70px;
   /* background-color: pink; */
+  margin-left: 20px;
 }
 
 header ul li {
   display: inline-block;
   line-height: 70px;
-  padding-left: 60px;
+  width: 8%;
+  text-align: center;
 }
 
 header .user {
@@ -63,7 +68,8 @@ header .user {
   width: 100%;
 }
 
-aside {
+
+.aside-l {
   position: fixed;
   left: 20px;
   top: 20%;
@@ -71,7 +77,7 @@ aside {
   height: 70%;
 }
 
-aside ul {
+.aside-l ul {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,7 +86,7 @@ aside ul {
   flex-direction: column;
 }
 
-aside ul li{
+.aside-l ul li{
   position: relative;
   padding-left: 0;
   display: block;
@@ -88,20 +94,22 @@ aside ul li{
   height: 8%;
   margin: 5px;
   opacity: 0.7;
+  min-width: 80px;
+  min-height: 40px;
 }
 
 .swiper{
   display: flex;
 }
 
-aside ul li a {
+.aside-l ul li a {
   display: block;
   width: 100%;
   height: 100%;
 }
 
 
-aside ul li img {
+.aside-l ul li img {
   width: 100%;
   height: 100%;
   border-radius: 4rem;
@@ -109,13 +117,13 @@ aside ul li img {
   z-index: -1;
 }
 
-aside ul li:nth-child(1) {
+.aside-l ul li:nth-child(1) {
   animation: swiper 9s infinite;
 }
-aside ul li:nth-child(2) {
+.aside-l ul li:nth-child(2) {
   animation: swiper 9s 3s infinite;
 }
-aside ul li:nth-child(3) {
+.aside-l ul li:nth-child(3) {
   animation: swiper 9s 6s infinite;
 }
 
@@ -153,7 +161,7 @@ aside ul li:nth-child(3) {
 }
 
 
-aside ul li i {
+.aside-l ul li i {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -163,6 +171,27 @@ aside ul li i {
   color: #000;
 }
 
+ .aside-r  {
+  position: fixed;
+  right: 20px;
+  top: 20%;
+  width: 15%;
+  height: 70%;
+}
+
+
+ .aside-r .datas {
+  width: 200px;
+  text-align: center;
+}
+
+ .aside-r .times {
+  padding-top: 10px;
+  width: 200px;
+  text-align: center;
+}
+
+
 main {
   margin: auto;
   width: 80%;
@@ -170,34 +199,19 @@ main {
 }
 
 
-main .aside {
-  float: right;
-  margin-top: 50px;
-  width: 20%;
-  z-index: 10;
-}
-
-
-main .datas {
-  width: 200px;
-  text-align: center;
-}
-
-main .times {
-  padding-top: 10px;
-  width: 200px;
-  text-align: center;
-}
-
 main .main {
-  margin: 0px auto;
-  width: 800px;
+  margin: 40px auto;
+  width: 75%;
+  height: 80%;
+  background-color: #fff;
 }
 
 main .main .text {
   padding-top: 20px;
-  width: 80%;
+  width: 100%;
   margin: auto;
+  height: 580px;
+  overflow: auto;
 }
 
 main .main .pic {
@@ -207,26 +221,38 @@ main .main .pic {
 
 main .main .control {
   position: relative;
-  height: 200px;
-  width: 80%;
+  height: 180px;
+  width: 100%;
   margin: 0px auto;
   background-color: #fff;
   background: url(../background/bg2.png) no-repeat;
+}
+
+main .main .control button {
+  width: 7%;
+  border-radius: 9px;
+  padding: 2px;
+  border: none;
+  background-color: green;
+  opacity: 0.7;
+}
+
+main .main .control button:hover {
+  opacity: 1;
 }
 
 main .main .control #text{
   position: absolute;
   bottom: 20px;
   left: 20px;
-  opacity: 0.7;
+  
 }
 
 main .main .control #images{
   position: absolute;
   bottom: 20px;
   left: 80px;
-  opacity: 0.7;
-
+  
 }
 
 main .main .control .introduce{
@@ -237,9 +263,9 @@ main .main .control .introduce{
 }
 
 footer {
-  height: 10%;
+  height: 5%;
   text-align: center;
-  line-height: 150px;
+  line-height: 40px;
 }
 
 

@@ -1,6 +1,5 @@
 let data = document.querySelector('.datas')
 let time = document.querySelector('.times')
-
 //时间
 function time1() {
   let date = new Date();
@@ -35,8 +34,8 @@ btn2.addEventListener('click', function () {
 });
 
 //侧边栏
-let ul = document.querySelector(".aside")
-let lis = document.querySelectorAll(".aside>li")
+let ul = document.querySelector(".aside-l>ul")
+let lis = document.querySelectorAll(".aside-l>ul>li")
 for (let i = 0; i < lis.length; i++) {
   lis[i].addEventListener('mouseover', function () {
     lis[i].style.opacity = "1"
@@ -48,7 +47,7 @@ for (let i = 0; i < lis.length; i++) {
     lis[i].style.color = "#666"
   })
   setInterval(function () {
-    if (Math.ceil(lis[i].offsetWidth) == Math.floor(ul.offsetWidth * 0.9)) {
+    if (Math.ceil(lis[i].offsetWidth) == Math.floor(ul.offsetWidth * 0.9) || Math.ceil(lis[i].offsetWidth) == Math.ceil(ul.offsetWidth * 0.9)) {
       lis[i].style.opacity = "1"
       lis[i].lastChild.lastChild.style.fontSize = "25px"
       lis[i].lastChild.lastChild.style.fontWeight = "600"
@@ -56,9 +55,7 @@ for (let i = 0; i < lis.length; i++) {
       lis[i].style.opacity = "0.7"
       lis[i].lastChild.lastChild.style.fontSize = "15px"
       lis[i].lastChild.lastChild.style.fontWeight = "400"
-
     }
-
   }, 20)
 }
 
