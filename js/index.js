@@ -163,12 +163,15 @@ document.addEventListener('mouseup', (e) => {
 })
 
 huangtu.addEventListener("click", function () {
-  if (box.style.display == "none") {
+  //解决display默认为空的问题
+  if (box.style.display == "none" || box.style.display == "") {
     box.style.display = "block"
     text.style.display = "none"
+    pic.style.display = "none"
   } else {
     box.style.display = "none"
     text.style.display = "block"
+    pic.style.display = "none"
   }
 })
 

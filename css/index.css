@@ -326,7 +326,6 @@ main .main .scroll {
   margin: auto;
   height: 580px;
   overflow: auto;
-  display: none;
 }
 
 .scroll::after {
@@ -376,13 +375,48 @@ main .main .scroll {
 
 /* ******************** */
 .huangtu{
-  display: block;
+  position: relative;
+  display: none;
   width: 100%;
   height: 600px;
   padding-top: 200px;
   background-color: #f4f4f4;
 
 }
+
+.tu_introduce {
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  width: 20%;
+  height: 5%;
+  animation: row 1.5s infinite;
+}
+
+
+.tu_introduce::after {
+  content: '\f054 \f054 \f054 \f054';
+  font-family: "icomoon";
+  font-size: 20px;
+  letter-spacing: 5px;
+  opacity: 0.6;
+}
+
+@keyframes row{
+  0% {
+    left: 48%;
+  }
+
+  50% {
+    left: 55%;
+  }
+
+  100% {
+    left: 48%;
+  }
+}
+
+
 
 
 .wrap {
