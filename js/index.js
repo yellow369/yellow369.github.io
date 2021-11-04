@@ -1,6 +1,30 @@
+//时间
 let data = document.querySelector('.datas')
 let time = document.querySelector('.times')
-//时间
+
+//清明上河图
+let huangtu = document.querySelector("#huangtu")
+let box = document.querySelector(".huangtu")
+const river = document.getElementById('river')
+const store = {
+  move: false
+}
+
+//图片/文字 转换
+let pic = document.querySelector(".pic")
+let img = document.querySelector(".pic>img")
+let text = document.querySelector(".scroll")
+let btn1 = document.getElementById("images")
+let btn2 = document.getElementById("text")
+let up = document.querySelector(".upjs")
+let down = document.querySelector(".downjs")
+let bu = -96;
+
+//左侧边栏
+let ul = document.querySelector(".aside-l>ul")
+let lis = document.querySelectorAll(".aside-l>ul>li")
+
+
 function time1() {
   let date = new Date();
   let year = date.getFullYear();
@@ -18,23 +42,18 @@ function time1() {
 setInterval(() => { time1() }, 1000);
 
 //图片/文字 转换
-let pic = document.querySelector(".pic")
-let img = document.querySelector(".pic>img")
-let text = document.querySelector(".scroll")
-let btn1 = document.getElementById("images")
-let btn2 = document.getElementById("text")
-let up = document.querySelector(".upjs")
-let down = document.querySelector(".downjs")
-let bu = -96;
+
 
 btn1.addEventListener('click', function () {
   pic.style.display = "block"
   text.style.display = "none"
+  box.style.display = "none"
 });
 
 btn2.addEventListener('click', function () {
   pic.style.display = "none"
   text.style.display = "block"
+  box.style.display = "none"
 });
 
 // let dis = (i) => {
@@ -99,8 +118,7 @@ down.addEventListener("click", function () {
 
 
 //左侧边栏
-let ul = document.querySelector(".aside-l>ul")
-let lis = document.querySelectorAll(".aside-l>ul>li")
+
 for (let i = 0; i < lis.length; i++) {
   // lis[i].addEventListener('mouseover', function () {
   //   lis[i].style.opacity = "1"
@@ -125,7 +143,33 @@ for (let i = 0; i < lis.length; i++) {
 }
 
 
+//清明上河图
 
+river.addEventListener('mousedown', (e) => {
+  e.preventDefault()
+  store.move = true
+  store.startX = e.pageX + river.scrollLeft
+})
+document.addEventListener('mousemove', (e) => {
+  e.preventDefault()
+  if (store.move) {
+    river.scrollLeft = store.startX - e.pageX
+  }
+})
 
+document.addEventListener('mouseup', (e) => {
+  e.preventDefault()
+  store.move = false
+})
+
+huangtu.addEventListener("click", function () {
+  if (box.style.display == "none") {
+    box.style.display = "block"
+    text.style.display = "none"
+  } else {
+    box.style.display = "none"
+    text.style.display = "block"
+  }
+})
 
 
