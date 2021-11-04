@@ -17,11 +17,15 @@ function time1() {
 }
 setInterval(() => { time1() }, 1000);
 
-//转换
+//图片/文字 转换
 let pic = document.querySelector(".pic")
-let text = document.querySelector(".text")
+let img = document.querySelector(".pic>img")
+let text = document.querySelector(".scroll")
 let btn1 = document.getElementById("images")
 let btn2 = document.getElementById("text")
+let up = document.querySelector(".upjs")
+let down = document.querySelector(".downjs")
+let bu = -96;
 
 btn1.addEventListener('click', function () {
   pic.style.display = "block"
@@ -33,19 +37,80 @@ btn2.addEventListener('click', function () {
   text.style.display = "block"
 });
 
-//侧边栏
+// let dis = (i) => {
+//   if (i == 0 || i == -96) {
+//     up.style.opacity = 0.2
+
+//   } else if (i == -571) {
+//     down.style.opacity = 0.2
+
+//   } else {
+//     up.style.opacity = 1
+//     down.style.opacity = 1
+//   }
+//   // console.log(i);
+// }
+// dis(0)
+// up.addEventListener("click", function () {
+//     bu = bu + 95
+//     animate(img, bu + 95)
+//     dis(bu);
+
+// })
+
+// down.addEventListener("click", function () {
+//     animate(img, bu)
+//     bu = bu - 95
+//     dis(bu);
+// })
+
+up.addEventListener("click", function () {
+  if (bu == -191 || bu == -286 || bu == -381 || bu == -476) {
+    up.style.opacity = 1
+    down.style.opacity = 1
+    bu = bu + 95
+    animate(img, bu + 95)
+  } else if (bu == 0 || bu == -96) {
+    up.style.opacity = 0.2
+  }
+  if (bu == -96) {
+    up.style.opacity = 0.2
+  }
+  console.log("up" + bu);
+})
+
+down.addEventListener("click", function () {
+  if (bu == -96 || bu == -191 || bu == -286 || bu == -381) {
+    up.style.opacity = 1
+    down.style.opacity = 1
+    bu = bu - 95
+    animate(img, bu)
+
+  } else if (bu == -476) {
+    down.style.opacity = 0.2
+  }
+  if (bu == -476) {
+    down.style.opacity = 0.2
+  }
+  console.log("down" + bu);
+})
+
+
+
+
+//左侧边栏
 let ul = document.querySelector(".aside-l>ul")
 let lis = document.querySelectorAll(".aside-l>ul>li")
 for (let i = 0; i < lis.length; i++) {
-  lis[i].addEventListener('mouseover', function () {
-    lis[i].style.opacity = "1"
-    lis[i].style.color = "#000"
-  })
+  // lis[i].addEventListener('mouseover', function () {
+  //   lis[i].style.opacity = "1"
+  //   lis[i].style.color = "#000"
+  // })
 
-  lis[i].addEventListener('mouseout', function () {
-    lis[i].style.opacity = "0.7"
-    lis[i].style.color = "#666"
-  })
+  // lis[i].addEventListener('mouseout', function () {
+  //   lis[i].style.opacity = "0.7"
+  //   lis[i].style.color = "#666"
+  // })
   setInterval(function () {
     if (Math.ceil(lis[i].offsetWidth) == Math.floor(ul.offsetWidth * 0.9) || Math.ceil(lis[i].offsetWidth) == Math.ceil(ul.offsetWidth * 0.9)) {
       lis[i].style.opacity = "1"
@@ -58,5 +123,9 @@ for (let i = 0; i < lis.length; i++) {
     }
   }, 20)
 }
+
+
+
+
 
 
